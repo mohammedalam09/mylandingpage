@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Iftekhar Alam - Java Developer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        .intro {
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Material Design Button */
+        .btn {
+            background: #2980b9;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1a5276;
+        }
+
+        .btn:active::before {
+            content: "";
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            transition: width 0.4s ease-out, height 0.4s ease-out;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+            /* Adjust for smaller screens */
+        }
+
+        /* Material Design Skill Card */
+        .skills div {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skills div:hover {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 16px 32px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .skills h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .skills ul {
+            list-style: none;
+        }
+
+        .skills ul li {
+            padding: 5px 0;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation on Page Load */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header,
+        .intro,
+        .skills div,
+        footer {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header h2 {
+                font-size: 1rem;
+            }
+
+            .skills div {
+                width: 45%;
+                /* Adjust width for medium-sized screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header h2 {
+                font-size: 1rem;
+            }
+
+            .skills div {
+                width: 100%;
+                /* Make skills full-width on smaller screens */
+            }
+
+            .btn {
+                font-size: 0.9rem;
+                /* Adjust button size for mobile */
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header h2 {
+                font-size: 0.9rem;
+            }
+
+            .intro p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                font-size: 0.85rem;
+                /* Further adjustment for small screens */
+            }
+
+            .skills div {
+                width: 100%;
+                /* Full-width for small screens */
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Mohammed Iftekhar Alam</h1>
+        <h2>Java | Spring Boot | Microservices</h2>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container">
+        <div class="intro">
+            <p>Hello, I am Mohammed Iftekhar Alam, Java Developer with 3+ years of experience in building REST APIs and
+                architecting Microservice-based applications. I have a strong background in working with both SQL and
+                NoSQL databases like MySQL, Oracle and MongoDB.I thrive in developing scalable, secure and
+                high-performance solutions that meet business needs.</p>
+            <a href="Mohammed Iftekhar Alam_Java Developer_3 Years.pdf" download class="btn">
+                <i class="fas fa-download"></i> Download My Resume
+            </a>
+            
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills">
+            <div>
+                <h3>Core Skills</h3>
+                <ul>
+                    <li><i class="fab fa-java" style="color: #007396;"></i> Java (Core, Advanced)</li> <!-- Java Icon -->
+                    <li><i class="fas fa-leaf" style="color: #6DB33F;"></i> Spring, Spring MVC</li> <!-- Spring Icon -->
+                    <li><i class="fas fa-leaf" style="color: #6DB33F;"></i> Spring Boot, Spring Security</li> <!-- Spring Boot & Security Icon -->
+                    <li><i class="fas fa-network-wired" style="color: #1C8CDC;"></i> Microservices Architecture</li> <!-- Microservices Icon -->
+                    <li><i class="fas fa-cogs" style="color: #F39C12;"></i> REST APIs Development</li> <!-- REST API Icon -->
+                </ul>
+                
+            </div>
+            <div>
+                <h3>Database Skills</h3>
+                <ul>
+                    <li><i class="fas fa-database" style="color: #00758F;"></i> MySQL</li> <!-- MySQL Icon -->
+                    <li><i class="fas fa-database" style="color: #F80000;"></i> Oracle</li> <!-- Oracle Icon -->
+                    <li><i class="fas fa-leaf" style="color: #47A248;"></i> MongoDB</li> <!-- MongoDB Icon -->
+                    <li><i class="fas fa-cogs" style="color: #59666C;"></i> Hibernate</li> <!-- Hibernate Icon -->
+                    <li><i class="fas fa-project-diagram" style="color: #47A248;"></i> MongoDB Aggregation</li> <!-- MongoDB Aggregation Icon -->
+                </ul>
+                
+            </div>
+            <div>
+                <h3>Other Tools</h3>
+                <ul>
+                    <li><i class="fas fa-stream" style="color: #231F20;"></i> Kafka</li> <!-- Kafka Icon -->
+                    <li><i class="fas fa-database" style="color: #DC382D;"></i> Redis</li> <!-- Redis Icon -->
+                    <li><i class="fab fa-git-alt" style="color: #F05033;"></i> Git</li> <!-- Git Icon -->
+                    <li><i class="fas fa-tasks" style="color: #1D72B8;"></i> Rundeck</li> <!-- Rundeck Icon -->
+                    <li><i class="fas fa-server" style="color: #F8F8F2;"></i> Tomcat</li> <!-- Tomcat Icon -->
+                </ul>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Connect with me:</p>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/mohammed-iftekhar-alamb1334a1b8" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/mohammedalam09" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:alamm2858@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2024 Mohammed Iftekhar Alam. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
